@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <link rel="stylesheet" href="/css/stylecursor.css" type="text/css">
+    <link rel="stylesheet" href="/css/styleloading.css" type="text/css">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-polyfills/0.1.43/polyfill.min.js"></script>
+    <!-- [If IE lt 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
+    <![endIf]-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Evelyn Le</title>
+ 
+</head> 
+<body>
+
+    <div id="preloader">
+        <div class="gif">
+        <!-- <img src="/images/dancingloading.gif"> -->
+        </div>
+    </div>
+
+
+
+
+    <div class="container" id="grained">
+        
+        <div class="contents">
+            <header  class="header">
+                
+                <div class="logo">
+                    <a href="../index.html">
+                        <p>Evelyn</p>
+                    </a>
+                
+                </div>
+        
+                <div class="about"> 
+                        <a class="about-text" href="/about.html"> <p>About</p>
+                        <a class="blog-text" href="/about.html"> <p>Blog</p>
+                        </a>
+                </div> 
+            </header>
+            <div class="horizontal-line-header"> </div>
+
+            <div class="blur-img-left"> 
+                <img src="/images/blur.png">
+            </div>
+        <div class="about-me">
+            <div class="biography">
+                <div class="bio-image">
+                  <a href=""><img src="/images/about_avt.jpg"></a>  
+                </div>
+                <div class="main-text">
+                    <p style="font-weight: 1000; ">Biography </p>
+                    <p>Tuyet Nhi (Evelyn) is a junior graphic designer and visual designer, based in Ho Chi Minh City.
+        <br>
+        Graduated Student at University of Finance and Marketing (Major: Marketing Communication) and 
+        Arena Multimedia (Major: Multimedia Designer)
+        <br>
+        Since 2021, she has been working as a Graphic Designer at ADAM Muzic Academy. Her personal projects were 
+        featured in Arena Multimedia design publications and their social media.
+        <br>
+        Her goal is to grow as a designer, continue to learn new skills to become an Art Director in the future.
+                    </p>
+                
+                <div class="social-contact"> Check out her
+                    <a class="contact-me" href="https://drive.google.com/file/d/1ocODBau4DX7u1RKaSH4lXsA0x2pX_u9p/view" >CV</a> -
+                    <a class="contact-me" href="https://www.behance.net/evelynle125"> Behance</a>
+                    -  <a class="contact-me" href="https://www.linkedin.com/in/evelynle125/"> LinkedIn</a> 
+                    -  <a class="contact-me" href="https://www.facebook.com/evelynle125">Facebook</a> 
+                    <br>
+                    <p>Contact: tuyetnhi.0125@gmail.com </p>
+                    
+                   
+                </div>
+            </div>
+            </div>
+        
+        </div>
+        <div class="blur-img-right"> 
+            <img style="margin-top: -30%;" src="/images/blur.png">
+        </div>
+    
+        <footer>
+            <div class="credit">
+                <span>
+                    © Evelyn Le (2022)
+                </span>
+            
+            </div>
+     
+            <div class="back-to-top"> 
+                <a href="#" onclick="topFunction()" id="myBtn" title="Go to top">↑ Back to Top</button>
+
+            </div> 
+            
+        </footer>
+        
+        
+    </div> <!-- contents -->
+      </div>   <!-- containter -->
+
+
+
+        
+     
+
+
+
+
+
+    
+    <div class="cursor" id="cursor" ></div>
+   
+ </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+</body>
+<script type="text/javascript" src="/js/grained.js"></script>
+<script src="../assets/js/gsap.min.js"></script>
+<script src="../assets/js/jquery-3.6.0.min.js"></script>
+<script src="/js/script.js"></script>
+<script src="/js/nghich.js"></script>
+<script src="/js/pace.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-bez@1.0.11/src/jquery.bez.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+
+<script>
+
+    paceOptions = {
+    ajax: true,
+    document: true,
+    eventLag: false
+    };
+
+    Pace.on('done', function() {
+    // $('.gif').delay(500).animate({top: '30%', opacity: '0'}, 3000, $.bez([0.19,1,0.22,1]));
+
+
+    $('#preloader').delay(1000).animate({top: '-100%'}, 2000, $.bez([0.19,1,0.22,1]));
+
+    TweenMax.from(".container", 2, {
+         delay: 1,
+              y: 2,  //do ease in & out cua ca container
+              opacity: 0,
+            //   ease: Expo.easeInOut
+        })
+   });
+
+  </script>
+
+<script>
+    const body = document.body,
+        scrollWrap = document.getElementsByClassName("container")[0],
+        height = scrollWrap.getBoundingClientRect().height -1,
+        speed = 0.04;
+
+    var offset = 0;
+
+    // body.style.height = Math.floor(height) + "px";
+
+    function smoothScroll() {
+        offset += (window.pageYOffset - offset) * speed;
+
+        var scroll = "translateY(-" + offset + "px) translateZ(0)";
+        scrollWrap.style.transform = scroll;
+
+        callScroll = requestAnimationFrame(smoothScroll);
+    }
+
+    smoothScroll();
+</script>
+
+<!-- <script>
+
+//   document.body.addEventListener("mousemove", event => {
+//     const mouseX = event.clientX;
+//     const mouseY = event.clientY;
+
+//     gsap.to(".ball", {
+//         x = mouseX;
+//         y = mouseY;
+       
+//     })
+//   })
+
+const ball = document.querySelector('.ball');
+    document.body.addEventListener('mousemove', event =>{
+        ball.style.left = e.clientX + 'px';
+        ball.style.top = e.clientY + 'px';
+    })
+
+</script> -->
+
+
+</html>

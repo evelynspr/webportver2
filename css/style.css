@@ -1,0 +1,783 @@
+@font-face {
+  font-family: Generator-Light;
+  src: url(/font/Generator-Light.otf);
+}
+
+@font-face {
+  font-family: Generator-Regular;
+  src: url(/font/Generator-Regular.otf);
+}
+
+@font-face {
+  font-family: Generator-Medium;
+  src: url(/font/Generator-Medium.otf);
+}
+
+@font-face {
+  font-family: Generator-SemiBold;
+  src: url(/font/Generator-SemiBold.otf);
+}
+
+html {
+  height: 100vh;
+  font-size: 1.0738255033557047vw ;
+  scroll-behavior: smooth;
+}
+
+body {
+  cursor: none;
+  font-family: Generator-Regular;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+}
+
+.blank {
+  width: 100%; height: 20px;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+
+a {
+  /* display: contents; */
+  text-decoration: none;
+  color: black;
+  cursor: none;
+}
+
+
+.grained {
+  z-index:10;
+}
+
+.contents {
+  width: 100%;
+  height: fit-content;
+  margin: 0;
+  position: relative;
+  /* background-color: #F0F0F0; */
+  overflow: hidden;
+  z-index: 2;
+}
+
+.section-1 {
+  background-image: url(/images/background_introduce.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: auto;
+
+}
+.header {
+  padding-left: 3%;
+  padding-right: 3%;
+  display: flex;
+  /* justify-content: space-between; */
+  padding-bottom: 20px;
+  font-size: 2.25rem;
+
+  /* background-color: brown; */
+}
+
+.horizontal-line-header {
+  width: 94%;
+  margin-left: 3%;
+  margin-right: 3%;
+  margin-top: -2.5rem;
+  display: block;
+  height: 1px;
+  background-color: black;
+/* border-top: 2px solid black; */
+}
+
+.logo {
+  width: 50%;
+  height: 100%;
+  padding-top: 13px;
+  display: relative;
+  z-index: 5;
+}
+
+.about {
+  display: relative;
+  width: 50%;
+  height: 100%;
+  z-index: 5;
+
+}
+
+a.about-text  {
+    display: absolute;
+    text-align: right;
+    float: right;
+    padding-top: 13px;
+    /* background-color: goldenrod; */
+}
+
+a.blog-text  {
+  display: absolute;
+  text-align: right;
+  float: right;
+  padding-top: 13px;
+  margin-right: 2.5vw;
+  /* background-color: goldenrod; */
+
+}
+
+/* landing page style */
+
+/* introduce dau*/
+.introduce {
+  width: 100%;
+  height: auto;
+  font-family: Generator-Medium;
+
+}
+
+/* scrolltext */
+section{
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+section .scroll{
+  width: 100%;
+  display: flex;
+}
+
+section .scroll div{
+  color: #000;
+  margin-top: 5vw;
+  font-size: 8rem;
+  /* background: #fff; */
+  white-space: nowrap;
+  font-weight: 400;
+  text-transform: uppercase;
+  animation: animate 240s linear infinite;
+  animation-delay: -240s;
+}
+
+section .scroll div:nth-child(2){
+  animation: animate2 240s linear infinite;
+  animation-delay: -120s;
+}
+
+
+
+@keyframes animate{
+  0%{
+    transform: translateX(100%);
+  }
+  100%{
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes animate2{
+  0%{
+    transform: translateX(0);
+  }
+  100%{
+    transform: translateX(-200%);
+  }
+}
+
+
+.intro-text {
+  width: 100%;
+  font-size: 2rem;
+  margin-left: 3%;
+  margin-top: -2%;
+  font-family: Generator-Regular;
+
+}
+
+.intro-gif {
+  margin-left: 3%;
+  width: 94%;
+  height: auto;
+}
+
+.intro-gif img {
+  width: 100%;
+  padding-bottom: 3vw;
+}
+
+/* quotes ne */
+
+.quotes {
+  width: 100%;
+  height: 1000px;
+  /* background-color: palegoldenrod; */
+  position: relative;
+  margin-top: 5vw;
+  z-index: -1;
+}
+
+
+.quotes span{
+  width: 94%;
+  margin-left: 3%;
+
+  /* background-color: plum; */
+  height: auto;
+  font-size: 4.1rem;
+  width: 54%;
+  padding-top: -1%;
+  position: absolute;
+
+}
+
+.quotes-img {
+  width: 94%;
+  margin-left: 3%;
+  margin-right: 3%;
+  margin-top: 0.3%;
+ position: relative;
+  width: 46%;
+  float: right;
+height: auto;
+}
+
+
+.quotes-img img{
+  width: 30%;
+  height: 47vw;
+  object-fit: cover;
+  position: absolute;
+  right: 0;
+  width: 70%;
+  display: block;
+
+}
+
+.quotes-img span{
+/* background-color: #FC4E43; */
+  width: 70%;
+  font-size: 1.3rem;
+  position: absolute;
+  right: 0;
+  top: 48.5vw;
+  display: block;
+  text-align: right;
+
+}
+
+.blur-img-right img {
+  width: 100%;
+  /* border: 1px solid red; */
+  margin-left: 50%;
+  position: absolute;
+  z-index: -1;
+ 
+}
+
+.intro-project {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  /* background-color: aquamarine; */
+}
+
+.blur-img-left img {
+  width: 100%;
+  /* border: 1px solid red; */
+  margin-left: -50%;
+  position: absolute;
+  z-index: -1;
+ margin-top: -70%;
+}
+
+
+
+/* typing-text */
+
+.effect-decoration {
+  /* background-color: blueviolet; */
+  position: relative;   
+  padding: 3vw 0;
+  overflow: hidden;
+}
+
+
+/* About page style*/
+
+.about-me {
+  font-size: 1.5rem;
+  font-weight: 100;
+  letter-spacing: 0.2px;
+  line-height: 2.188rem;
+  margin-top: 5%;
+}
+
+.about-me a {
+  font-size: 24px;
+  font-weight: 100;
+  letter-spacing: 0.2px;
+  line-height: 35px;
+}
+
+.biography {
+  display: flex;
+  font-family: Generator-Light;
+  margin-left: 3%;
+  margin-right: 3%;
+  /* background-color: brown; */
+}
+
+.bio-image {
+  width: 40%;
+
+}
+
+.bio-image img {
+  width: 90%;
+  height: 40vw;
+  object-fit: cover;
+  background-position: center;
+  margin-top: 4vh;
+}
+
+.main-text {
+  width: 60%;
+}
+
+
+a.contact-me {
+  position: sticky;
+    z-index: 10;
+    /* color:#FC4E43; */
+    /* float: right; */
+}
+
+/* project page */
+.main-prj {
+  font-family: Generator-Regular;
+}
+
+.main-prj h1{
+  /* background-color: blue; */
+  width: 78%;
+  font-family: Generator-Medium;
+  font-weight: 100;
+  letter-spacing: 2px;
+  font-size: 8rem;
+
+}
+
+.main-prj img {
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.main-prj p {
+  font-size: 1.75rem;
+  line-height: 2rem;
+}
+
+
+.part1 {
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
+.part1 img {
+  padding-bottom: 1rem;
+}
+
+.frame {
+  margin-top: 8vw;
+  display: flex;                  /* establish flex container */
+  flex-direction: row;            /* default value; can be omitted */
+  flex-wrap: nowrap;              /* default value; can be omitted */
+  justify-content: space-between; /* switched from default (flex-start, see below) */
+  /* background-color: lightyellow; */
+}
+
+.frame> div {
+  width: 32%;
+  
+  /* border: 2px dashed red; */
+}
+
+.frame> div img {
+  width: 80%;
+  margin-top: 7%;
+  height: auto;
+  /* border: 2px dashed red; */
+ 
+}
+.main-prj h2 {
+  font-size: 1.875rem;
+}
+
+
+.part2, .part3, .part4, .part5, .part6,.takeaway{
+  margin-left: 3%;
+  margin-right: 3%;
+  position: relative;
+  
+}
+.horizontal-line-project {
+  margin-top: 13rem;
+  margin-bottom: 4rem;
+  display: block;
+  height: 1px;
+  background-color: black;
+/* border-top: 2px solid black; */
+}
+
+#img-le{
+  width: 100%;
+  height: auto;
+  margin-top: 4rem;
+}
+
+#img-le-70{
+  /* background-color: black; */
+  object-fit: cover;
+  width: 80%;
+  height: auto;
+  margin-top: 4rem;
+  position: relative;
+  margin-left: 20%;
+}
+
+#img-fullsize{
+  width: 100%;
+  object-fit: cover;
+  /* background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; */
+  margin-top: 4rem;
+}
+
+
+.frame-anh {
+  margin-top: 10%;
+  margin-bottom: 20%;
+  display: flex;                  /* establish flex container */
+  flex-direction: row;            /* default value; can be omitted */
+  flex-wrap: nowrap;              /* default value; can be omitted */
+  justify-content: space-between; /* switched from default (flex-start, see below) */
+  /* background-color: lightyellow; */
+}
+
+.frame-anh > div {
+  width: 30%;
+  /* border: 2px dashed red; */
+}
+
+
+
+.frame-2-anh {
+  margin-top: 8%;
+  margin-bottom: 8%;
+  display: flex;                  /* establish flex container */
+  flex-direction: row;            /* default value; can be omitted */
+  flex-wrap: nowrap;              /* default value; can be omitted */
+  justify-content: space-between; /* switched from default (flex-start, see below) */
+  /* background-color: lightyellow; */
+}
+
+.frame-2-anh > div {
+  width: 49%;
+  /* border: 2px dashed red; */
+  object-fit:cover;
+}
+
+.frame-2-anh > div span {
+ 
+  font-size: 1.75rem;
+  line-height: 2rem;
+}
+
+
+.thoughts {
+  position: relative;
+  min-height: 700px;
+}
+.thoughts-text {
+  left: 0;
+  float: left;
+  width: 60%;
+  position: absolute;
+
+  /* background-color: blue; */
+}
+
+.thoughts-img {
+  right: 0;
+  width: 30%;
+  position: absolute;
+  /* background-color: blue; */
+  float: right;
+}
+
+.thoughts-img img {
+  height: 40vw;
+  object-fit: cover;
+}
+.i-frame {
+  display: flex;
+  justify-content: center;
+}
+
+.direct-prj {
+  display: flex;
+  font-size: 2rem;
+  font-weight: 100;
+  letter-spacing: 0.2px;
+  line-height: 2.5rem;
+  padding-top: 5rem; 
+  margin-left: 3%;
+  margin-right: 3%;
+  text-transform:uppercase;
+  font-family: Generator-Medium;
+  font-weight: 100;
+}
+
+.direct-prj a {
+  width: 100%;
+  font-weight: 100;
+  letter-spacing: 0.2px;
+  line-height: 2.188rem;
+  display: flex;
+}
+
+.previous-prj {
+  display: relative;
+  width: 50%;
+  height: 100%;
+  z-index: 10;
+  /* background-color: bisque; */
+ 
+}
+
+.next-prj {
+  z-index: 10;
+  /* background-color: bisque; */
+  display: relative;
+  width: 50%;
+  height: 100%;
+}
+
+a.pre-link {
+  width: fit-content;
+  display: absolute;
+  float: left;
+  /* color: #FC4E43; */
+  
+}
+
+a.next-link {
+  width: fit-content;
+  display: absolute;
+  float: right;
+}
+
+.float-img  {
+  width: 49%;
+  height: auto;
+  
+}
+
+
+.row {
+  width: 94%;
+  margin-left: 3%;
+  margin-right: 3%;
+  text-align: justify;
+  height: auto;
+}
+
+.two-screen-left {
+  width: 100%;
+  height: 77vw;
+  /* background-color:darkcyan; */
+  position: relative;
+  margin-top: 20%;
+  margin-bottom: 20%;
+}
+
+.first-screen-left {
+  width: 30%;
+  background-size: cover;
+  position: absolute;
+  float: left;
+
+}
+
+.second-screen-left {
+  width: 30%;
+  background-size: cover;
+  position: absolute;
+  margin-top: 15% ;
+  margin-left: 35%;
+
+}
+
+
+.two-screen-right {
+  width: 100%;
+  height: 77vw;
+  /* background-color:darkcyan; */
+  position: relative;
+  margin-top: 20%;
+
+}
+
+.first-screen-right {
+  width: 30%;
+  background-size: cover;
+  position: absolute;
+  float: left;
+  right: 0;
+
+}
+
+.second-screen-right {
+  width: 30%;
+  background-size: cover;
+  position: absolute;
+  margin-top: 15% ;
+  right: 35%;
+
+}
+
+.justify-screen {
+  margin-left:auto;
+  margin-right: auto;
+  width: 40%;
+  height: auto;
+  /* background-color: darkkhaki; */
+  margin-top: 20%;
+  margin-bottom: 20%;
+}
+
+.text-right {
+  width: 100%;
+  /* background-color: blue; */
+  position: relative;
+  margin-left: 75%;
+  text-align: right;
+}
+
+.float-text {
+  width: 47%;
+  display: inline-block;
+  /* background-color: blue; */
+}
+
+.float-text h1 {
+  font-size: 5.5rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.float-text p{
+
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.getintouch {
+  width: 94%;
+  margin-left: 3%;
+  margin-right: 3%;
+  /* background-color: aqua; */
+  font-size: 8.3rem;
+  /* font-weight: 600; */
+  position: relative;
+}
+
+.getintouch img{
+  width: 70%;
+  left:10%;
+  top: -180%
+}
+
+footer {
+  /* background-color: blueviolet; */
+  font-size: 1.5rem;
+  font-weight: 100;
+  height: 100px;
+  display: flex;
+  width: 94%;
+  margin-left: 3%;
+  margin-right: 3%;
+  font-family: Generator-Medium;
+  font-weight: 100;
+}
+
+
+
+.credit {
+  width: 50%;
+  height: 100%;
+  /* background-color:green; */
+  position: relative;
+  z-index: 1;
+  
+}
+
+.credit span {
+  position: absolute;
+  bottom: 10px;
+
+
+}
+
+.back-to-top {
+  display: relative;
+  width: 50%;
+  height: 100%;
+  /* z-index: 10; */
+
+
+}
+
+
+
+#myBtn {
+  position: absolute;
+  right: 3%;
+  bottom: 10px;
+  z-index: 1; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  font-size: 1.5rem;
+  font-weight: 100;
+  /* z-index: 10; */
+}
+
+
+
+/*Mobile: width < 740 px*/
+@media screen and (max-width: 46.1875em) {
+  html {
+    height: 100vh;
+    font-size: 8px ;
+  }
+}
+
+/*table: width >= 740 and width < 1024 px */
+@media screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+  html {
+    height: 100vh;
+    font-size: 12px ;
+  }
+}
+/* PC: width >= 1024px */
+@media screen and (max-width: 64em) {
+  
+}
